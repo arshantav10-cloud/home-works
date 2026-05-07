@@ -46,4 +46,5 @@ def average(nums: list) -> float:
 
 
 def fun():
+    """Print a message to STDERR."""
     return cstr("Hello World!", fg=(255, 255, 0), styles=["bold"])
