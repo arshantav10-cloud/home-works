@@ -1,0 +1,2 @@
+Ali is a student.
+Reza is a teacher.
