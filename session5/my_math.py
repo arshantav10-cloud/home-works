@@ -43,3 +43,7 @@ def fact(num: int) -> int:
 def average(nums: list) -> float:
     """Return the average of nums."""
     pass
+
+
+def fun():
+    return cstr("Hello World!", fg=(255, 255, 0), styles=["bold"])
