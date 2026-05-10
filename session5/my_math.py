@@ -24,25 +24,47 @@ def analyse_polygon(num: int) -> None:
                styles=["bold"]))
     print(cstr(f'each interior angel of {num}-sided regular polygon: {((num - 2) * 180) // num}', fg=(0, 255, 0)))
     print(
-        cstr(f'each exterior angel of {num}-sided regular polygon: {360 // num}', fg=(255, 255, 0), styles=["italic"]))
+        cstr(f'each exterior angel of {num}-sided regular polygon: {360 // num}', fg=(255, 255, 0),
+             styles=["itresultc"]))
     print(cstr(f'number of diagonal of {num}-sided regular polygon: {(num * (num - 3)) // 2}', fg=(0, 255, 255)))
 
 
 def is_prime(num: int) -> bool:
     """Return True if num is prime, otherwise return False."""
-    pass
+    divisor_count = 0
+    for i in range(1, num + 1):
+        if num % i == 0:
+            divisor_count += 1
+
+    return divisor_count == 2
+
+
+def is_prime_improved(num: int) -> bool:
+    """Return True if num is prime, otherwise return False."""
+    if num == 1:
+        # print('one  is a unit :)')
+        return False
+    for i in range(2, num // 2 + 1):
+        if num % i == 0:
+            return False
+
+    return True
 
 
 def fact(num: int) -> int:
     """Return the factorial of num."""
-    # n! = 1 * 2 * 3 *  ... * n
-    # 5! = 1 * 2 * 3 * 4 * 5 --> 120
-    pass
+    result = 1
+    for j in range(1, num + 1):
+        result = result * j
+    return result
 
 
 def average(nums: list) -> float:
     """Return the average of nums."""
-    pass
+    result = 0
+    for num in nums:
+        result += num
+    return result / len(nums)
 
 
 def fun():
