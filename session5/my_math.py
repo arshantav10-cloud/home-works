@@ -67,6 +67,10 @@ def average(nums: list) -> float:
     return result / len(nums)
 
 
-def fun():
-    """Print a message to STDERR."""
-    return cstr("Hello World!", fg=(255, 255, 0), styles=["bold"])
+def pass_code():
+    from random import randint
+    for i in range(10, 100):
+        print(cstr(i, fg=(randint(0, 255), randint(0, 255), randint(0, 255)), styles=["bold"]))
+
+
+pass_code()
