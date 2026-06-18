@@ -20,7 +20,7 @@ class Polygon:
         return (self.n * (self.n - 3)) // 2
 
 
-for i in range(3, 11):
+for i in range(3, 16):
     shape = Polygon(i)
     print(f'sum of interior angles({i}-sided): {shape.get_sum_of_interior_angles()}')
     print(f'each interior angles({i}-sided): {shape.get_each_interior_angle()}')
